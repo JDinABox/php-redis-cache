@@ -1,0 +1,25 @@
+{
+    "name": "JDinABox/php-redis-cache",
+    "type": "library",
+    "description": "A PHP Cache using Redis",
+    "homepage": "https://github.com/JDinABox/php-redis-cache",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JDinABox",
+            "email": "jd@jdinabox.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2",
+        "ext-redis": "*",
+        "ext-igbinary": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "jd\\php_cache\\": "src/"
+        }
+    }
+}
