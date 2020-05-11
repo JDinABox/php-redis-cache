@@ -1,5 +1,5 @@
 {
-    "name": "JDinABox/php-redis-cache",
+    "name": "jdinabox/php-redis-cache",
     "type": "library",
     "description": "A PHP Cache using Redis",
     "homepage": "https://github.com/JDinABox/php-redis-cache",
