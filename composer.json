@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "jd\\php_cache\\": "src/"
+            "jdinabox\\php_cache\\": "src/"
         }
     }
 }
