@@ -17,7 +17,7 @@
  * @since      Class available since Release 1.0.0
  */
 
-namespace jdinabox\php_cache;
+namespace Jdinabox\Cache;
 
 class Cache
 {
