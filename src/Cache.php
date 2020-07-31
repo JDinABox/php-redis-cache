@@ -4,7 +4,7 @@
  * A Redis Php Cache
  * PHP Version 7.4
  *
- * Mostly PSR-16 compatable
+ * Mostly PSR-16 compatible
  *
  * @category   Class
  * @package    JDinABox/php-redis-cache
@@ -135,10 +135,7 @@ class Cache
     /** @return bool */
     public function clear()
     {
-        $redis = $this->redis;
-        $keys = $redis->keys('*');
-        $keys = array_map(fn ($key) => str_replace("php-cache:", "", $key), $keys);
-        $redis->unlink($keys);
+        $this->redis->unlink($this->keys('*'));
         return true;
     }
 
@@ -222,5 +219,15 @@ class Cache
             }
         }
         return false;
+    }
+
+    /**
+     * @param string pattern
+     * @return array
+     */
+    public function keys(string $pattern)
+    {
+        $keys = $this->redis->keys($pattern);
+        return array_map(fn ($key) => str_replace($this->config["prefix"], "", $key), $keys);
     }
 }
